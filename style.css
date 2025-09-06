@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
+}
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* empile le menu sur petit écran */
+  }
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* coupe ce qui dépasse */
+}
+.menu_icons {
+    width: 35px;
+    cursor: pointer;
+}
+.logo {
+    width: 100px;
+margin-left:-10%;
+}
+button img {
+    width: 20px;
+    margin-left: 10px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu ul {
+    margin-left : 25px;
+    display: flex;
+    list-style: none;
+}
+.menu ul a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    position: relative;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+.menu ul a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    position: relative;
+    text-transform: capitalize;
+    margin-left: 10px;
+    display: inline-block; /* Le soulignement suit la largeur du texte */
+}
+
+.menu ul a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #f7a800;
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,1.7,.7,1);
+    pointer-events: none;
+}
+
+.menu ul a:hover::after,
+.menu ul a:focus::after {
+    width: 100%;
+}
+.header-end {
+    display: flex;
+    align-items: center;
+}
+.header-end i {
+    margin-right: 20px;
+}
+.header-end i:hover {
+    cursor: pointer;
+}
+.header-end button i {
+    margin-right: 7px;
+}
+button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 8px 15px;
+    background-color: #f7a800;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.2s ease-out;
+
+}
+button a {
+color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease-out;
+
+}
+button span {
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+button:hover {
+    transform: scale(1.06);
+
+}
+.home {
+    margin-top: 80px;
+    background: url(images/img1.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+.foods {
+    margin: 50px 0;
+    padding: 0 10%;
+    
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family:'Anton', sans-serif;
+}
+.foods p {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.foods-list {
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+.foods-list .box {
+    flex: 1 1 300px; /* Largeur minimale de 300px, s'adapte à l'espace */
+    max-width: 350px; /* Largeur maximale */
+    box-sizing: border-box;
+    
+}
+.foods-list img {
+    width: 100%; /* L'image prend toute la largeur de la box */
+    max-width: 350px;
+    height: auto;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+          background-color: #fbf5ee;
+    transition: transform 0.4s cubic-bezier(.4,1.7,.7,1), box-shadow 0.3s;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+.foods-list .box {
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+.foods-list .box:hover {
+    transform: scale(1.05);
+}
+.tacos {
+    margin: 50px 0;
+    padding: 0 10%;
+    
+}
+
+.tacos p {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.tacos-list {
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+.tacos-list .box {
+    flex: 1 1 300px; /* Largeur minimale de 300px, s'adapte à l'espace */
+    max-width: 350px; /* Largeur maximale */
+    box-sizing: border-box;
+    
+}
+.tacos-list img {
+    width: 100%; /* L'image prend toute la largeur de la box */
+    max-width: 350px;
+    height: auto;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+          background-color: #fbf5ee;
+    transition: transform 0.4s cubic-bezier(.4,1.7,.7,1), box-shadow 0.3s;
+}
+
+.tacos-list .box {
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+.tacos-list .box:hover {
+    transform: scale(1.05);
+}
+
+
+ .little-foods {
+      padding: 0 10%;
+    }
+
+    .little-foods img {
+      width: 220px;
+      max-width: 100%;
+    }
+
+.little-foods_box {
+    margin: 50px 0;
+    display: flex;
+    align-items: stretch;   /* même hauteur pour les box */
+    justify-content: center; 
+    flex-wrap: wrap;         
+    gap: 1rem;               
+    /* height: 280px; <-- À supprimer */
+}
+
+    .little-foods_box .box {
+      flex: 1 1 220px;   /* min 220px, s’adapte */
+      max-width: 300px;
+      background-color: #fbf5ee;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.25s;
+    }
+
+    .little-foods_box .box:hover {
+      transform: scale(0.95);
+    }
+
+    .little-foods_box h3 {
+      margin: 0.5rem 0;
+    }
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+    padding: 25px 10%;
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;          /* 🔥 le footer passe toujours au-dessus */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    font-size: 15px;
+}
+.icones_social{
+    margin: 25px 0;
+}
+.icones_social i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+footer img {
+    margin-top: 20px;
+    border: 1px solid #fff;
+    height: 50px;
+    cursor: pointer;
+}
+footer img:last-child {
+    margin-left: 10px;
+}
+footer .div1 a {
+color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease-out;
+}
+footer .div2 {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between; /* Les éléments sont espacés */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Ajuste l'écart selon ton besoin */
+}
+
+footer .div2 h3 {
+margin-bottom: 10px;
+}
+footer .div2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+footer .div2 ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    transition: 0.2s ease-out;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+footer .div2 ul a:hover {
+    color: #f7a800;
+}
+footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    text-align: right;
+    border: 0;
+        margin-left: auto; /* Ajoute ceci pour placer le logo tout à droite */
+
+}
+footer .logo img {
+   width: 250px; /* Taille normale du logo */
+    height: auto;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    border: 0;
+    
+}
+footer hr {
+    width: 100%;
+    border: none;
+    border-top: 1.5px solid #fff;
+    opacity: 0.15;
+    margin: 20px 0;
+}
+
+footer .div3{
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+
+/* Par défaut, cacher l’icône menu sur desktop */
+.menu_icons {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    html, body {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+ header {
+        flex-direction: row;         /* <-- repasse en ligne */
+        align-items: center;         /* <-- centre verticalement */
+        justify-content: space-between;
+        padding: 6px 3vw;            /* <-- padding réduit */
+        height: auto;
+        min-width: 0;
+    }
+    .logo {
+        width: 70px;                 /* <-- logo plus petit */
+        margin: 0;
+        display: block;
+        position: static;
+    }
+    .menu {
+        width: auto;
+        min-width: 0;
+    }
+    .header-end {
+        width: auto;
+        margin-top: 0;
+        min-width: 0;
+    }
+   .menu ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        z-index: 1000;
+        transform-origin: top;
+        transition: none;
+        border-radius: 10px;
+        /* Retire transition ici */
+    }
+    .menu ul.open {
+        display: flex;
+        animation: menuSlideDown 0.4s cubic-bezier(.4,1.7,.7,1) both;
+    }
+    .menu_icons {
+        display: block;
+        z-index: 1100;
+    }
+
+    .menu ul li {
+        width: 100%;
+        padding: 10px 20px;
+    }
+    .menu ul li a {
+        font-size: 18px;
+        color: #222;
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+.menu ul a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    position: relative;
+    text-transform: capitalize;
+    margin-left: 10px;
+    display: inline-block; /* Le soulignement suit la largeur du texte */
+}
+
+
+
+.menu ul a:hover::after,
+.menu ul a:focus::after {
+    width: 100%;
+}
+    .header-end i {
+        margin: 0 10px;
+        font-size: 18px;
+    }
+    .header-end button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .header-end button i {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+
+.home {
+        margin-top: 70px;
+        background-position: center;
+        background-size: contain;    /* Affiche toute l'image */
+        background-repeat: no-repeat; /* Évite la répétition si l'image est petite */
+        width: 100vw;
+        min-height: 230px;
+        height: 60vw;                /* Hauteur proportionnelle à la largeur de l'écran */
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;                  /* Pas de padding pour éviter le débordement */
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .foods,
+    .little-foods {
+        padding: 0 2vw;
+        margin: 30px 0;
+        min-width: 0;
+    }
+    h1 {
+        font-size: 28px;
+        word-break: break-word;
+    }
+    .foods-list,
+    .little-foods_box {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 16px;
+        margin-top: 30px;
+        padding-bottom: 10px;
+        scrollbar-width: thin;
+        scrollbar-color: #f7a800 #eee;
+        align-items: stretch;
+        min-width: 0;
+    }
+    .foods-list .box,
+    .little-foods_box .box {
+        min-width: 220px;
+        max-width: 80vw;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+    }
+    .foods-list .box img,
+    .little-foods_box .box img {
+        width: 100%;
+        max-width: 80vw;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.4s cubic-bezier(.4,1.7,.7,1), box-shadow 0.3s;
+    }
+    .foods-list .box img:hover,
+    .little-foods_box .box img:hover {
+        transform: scale(1.08) rotate(-2deg);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    footer {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 5vw;
+        text-align: center;
+        overflow-x: hidden;
+        min-width: 0;
+    }
+    footer .div2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        overflow-x: auto;
+        min-width: 0;
+    }
+    footer .div2 > div {
+        width: 100%;
+        min-width: 0;
+    }
+    footer .logo {
+        margin: 20px auto 0 auto;
+        justify-content: center;
+        width: 100%;
+    }
+    footer .logo img {
+        width: 120px;
+        height: auto;
+    }
+    footer hr {
+        margin: 15px 0;
+    }
+    .icones_social {
+        justify-content: center;
+    }
+}
+
+@keyframes menuSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scaleY(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+.menu ul.open {
+    display: flex;
+    animation: menuSlideDown 0.4s cubic-bezier(.4,1.7,.7,1) both;
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 18px;
+    max-width: 90vw;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.close-modal {
+    position: absolute;
+    top: 10px; right: 18px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #f7a800;
+}
+#modal-images img {
+    width: 80px;
+    margin: 8px;
+    border-radius: 8px;
+}
+#modal-price {
+    margin-top: 18px;
+    font-size: 20px;
+    color: #f7a800;
+    font-weight: bold;
+}
+#modal-desc {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #222;
+}
+.modal-content.open-anim {
+    animation: modalFadeIn 0.35s cubic-bezier(.4,1.7,.7,1) both;
+}
+.modal-content.close-anim {
+    animation: modalFadeOut 0.25s cubic-bezier(.4,1.7,.7,1) both;
+}
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes modalFadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.92) translateY(40px);
+    }
+}
+
+.btn-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f7a800;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-location i {
+    font-size: 18px;
+}
+.btn-location:hover {
+    background: #ffbb33;
+    transform: scale(1.06);
+    color: #222;
+}
+
+/* Change la police du modal */
+#menu-modal {
+    font-family: 'Arial', sans-serif; /* Remplace 'Arial' par la police de ton choix */
+}
+
+/* Si tu veux cibler le titre uniquement */
+#menu-modal #modal-title {
+    font-family: 'Anton', sans-serif;
+}
+
+/* Pour les descriptions */
+#menu-modal #modal-desc p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Pour le prix */
+#menu-modal #modal-price {
+    font-family: 'Roboto', serif;
+    font-size: 22px;
+    color: #f7a800;
+}
