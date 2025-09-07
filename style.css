@@ -129,7 +129,6 @@ button:hover {
 .home {
     margin-top: 120px;
     width: 100%;       /* prend toute la largeur de l'écran */
-    border-radius: 50px;
     overflow: hidden;
     position: relative;
 }
@@ -781,4 +780,5 @@ footer .div3{
     font-size: 22px;
     color: #f7a800;
 }
+
 
