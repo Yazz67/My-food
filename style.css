@@ -139,12 +139,12 @@ button:hover {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.2);
-    border-radius: 50px;
 }
 .home .banner {
     width: 100%;       /* image prend toute la largeur */
     height: auto;      /* hauteur ajustée automatiquement */
     display: block;
+
 }
 
 .home button {
@@ -196,7 +196,12 @@ h1 {
     flex: 1 1 300px; /* Largeur minimale de 300px, s'adapte à l'espace */
     max-width: 350px; /* Largeur maximale */
     box-sizing: border-box;
-    
+        transition: 0.5s ease-out;
+}
+.foods-list .box:hover {
+        transform: scale(1.05);
+
+    cursor: pointer;
 }
 .foods-list img {
     width: 100%; /* L'image prend toute la largeur de la box */
@@ -214,10 +219,10 @@ h3 {
 
 }
 .hamburger-list .box {
-    transition: 0.5s ease-out;
     cursor: pointer;
 }
 .hamburger-list .box:hover {
+    
     transform: scale(1.05);
 }
 .hamburger {
@@ -257,7 +262,7 @@ h3 {
 }
 
 .hamburger-list .box {
-    transition: 0.5s ease-out;
+        transition: 0.5s ease-out;
     cursor: pointer;
 }
 .hamburger-list .box:hover {
@@ -288,6 +293,10 @@ h3 {
     box-sizing: border-box;
     
 }
+.tacos-list .box {
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
 .tacos-list img {
     width: 100%; /* L'image prend toute la largeur de la box */
     max-width: 350px;
@@ -300,12 +309,24 @@ h3 {
 }
 
 .tacos-list .box {
-    transition: 0.5s ease-out;
     cursor: pointer;
 }
 .tacos-list .box:hover {
     transform: scale(1.05);
 }
+ .little-foods h2 {
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Anton', sans-serif;
+      position: center;
+    }
+
+    .little-foods p {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
 
 
  .little-foods {
@@ -316,7 +337,9 @@ h3 {
       width: 220px;
       max-width: 100%;
     }
-
+.little-foods .box {
+    cursor: pointer;
+}
 .little-foods_box {
     margin: 50px 0;
     display: flex;
@@ -780,5 +803,3 @@ footer .div3{
     font-size: 22px;
     color: #f7a800;
 }
-
-
