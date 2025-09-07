@@ -146,7 +146,6 @@ button:hover {
     width: 100%;       /* image prend toute la largeur */
     height: auto;      /* hauteur ajustée automatiquement */
     display: block;
-    border-radius: 50px; /* garde les coins arrondis */
 }
 
 .home button {
@@ -782,3 +781,4 @@ footer .div3{
     font-size: 22px;
     color: #f7a800;
 }
+
